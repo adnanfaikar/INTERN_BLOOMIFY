@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "../Component/Dropdown";
-import Button from "../UI/Button";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -13,7 +12,8 @@ const Navbar = () => {
         width={"80px"}
         height={"80px"}
         alt=""
-        className="pl-8 p-2"
+        className="pl-8 p-2 cursor-pointer"
+        onClick={() => navigate("/")}
       />
 
       <div class="flex space-x-4 px-16">
@@ -36,7 +36,8 @@ const Navbar = () => {
           width={"40px"}
           height={"40px"}
           alt=""
-          className=" p-2"
+          className=" p-2 cursor-pointer"
+          onClick={() => navigate("/login")}
         />
       </div>
     </div>
