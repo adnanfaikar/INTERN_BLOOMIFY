@@ -30,7 +30,10 @@ const Navbar = () => {
           {" "}
           Article
         </p>
-        <button className="rounded-full bg-[#0E556C] w-[127px] h-[44px] text-white mt-[6px] flex py-2.5 pl-5 ">
+        <button
+          className="rounded-full bg-[#0E556C] w-[127px] h-[44px] text-white mt-[6px] flex py-2.5 pl-5 "
+          onClick={() => navigate("/login")}
+        >
           <img src="../src/Assets/Logo/Google.svg" alt="" />
           <p className="pl-2">Sign In</p>
         </button>

@@ -2,7 +2,10 @@ import React from "react";
 import Navbar from "../shared/Navbar";
 import Button from "../UI/Button";
 import Footer from "../Component/Footer";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <Navbar />
@@ -38,6 +41,7 @@ const Home = () => {
           <Button
             variation={"primary"}
             className="text-center flex justify-center mt-28 mx-auto px-auto "
+            onClick={() => navigate("/product")}
           >
             Go now!
           </Button>
