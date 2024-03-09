@@ -10,10 +10,10 @@ export default function Example(props) {
   return (
     <Menu as="div" className="relative inline-block text-left text-xl ">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-trasnparent px-[72px] py-3 text-md  text-[#4D4133] ">
+        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-trasnparent px-2 py-3 text-md  text-[#0E556C] ">
           {props.children}
           <ChevronDownIcon
-            className=" mt-1 h-5 w-5 text-[#2A2E34]    "
+            className=" mt-1 h-5 w-5 text-[#0E556C]    "
             aria-hidden="true"
           />
         </Menu.Button>

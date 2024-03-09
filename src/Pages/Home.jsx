@@ -7,23 +7,26 @@ const Home = () => {
     <div>
       <Navbar />
       <div className="flex justify-center items-center mt-10 px-10">
-        <div class="w-full h-[432px] bg-[#CDC1B3] border border-gray-400 flex justify-center items-center">
-          <div>
-            <h6 className="font-bold text-center text-[40px] text-[#4D4133] italic flex justify-center">
-              Find the Perfect Solution for Your Skin
+        <div class="w-full h-[432px] bg-[#CFE0E6] border border-gray-400 flex justify-center items-center ">
+          <div className="bg-[url('../src/Assets/Banner-Photo.svg')] bg-cover w-[642px] h-[361px] -ml-12"></div>
+          <div className="w-[475px] h-[377px] text-left pl-10 pt-5">
+            <h6 className="font-bold text-[#093341]  flex text-3xl ">
+              WELCOME TO <br /> BLOOMIFY
             </h6>
-            <br />
-            <Button
-              variation={"primary"}
-              className="text-center flex justify-center mx-auto px-auto"
-            >
-              Find Out Here
+            <p>
+              Not sure where to start? Explore our informative articles, how-to
+              guides, product recommendations and consultations to gain valuable
+              insights into your beauty and wellness journey.
+            </p>
+            <Button variation={"primary"} className="w-full mt-10">
+              Find Now
             </Button>
+            <br />
           </div>
         </div>
       </div>
       <div className="flex justify-between pt-10 px-[40px]">
-        <div className="w-[650px] h-[297px] bg-[#CDC1B3] border border-gray-400 rounded-lg mb-10">
+        <div className="w-[650px] h-[297px] bg-[#CFE0E6] border border-gray-400 rounded-lg mb-10">
           <Button
             variation={"primary"}
             className="text-center flex justify-center mt-28 mx-auto px-auto"
@@ -31,7 +34,7 @@ const Home = () => {
             Go now!
           </Button>
         </div>
-        <div className="w-[650px] h-[297px] bg-[#CDC1B3] border border-gray-400 rounded-lg mb-2">
+        <div className="w-[650px] h-[297px] bg-[#CFE0E6] border border-gray-400 rounded-lg mb-2">
           <Button
             variation={"primary"}
             className="text-center flex justify-center mt-28 mx-auto px-auto "

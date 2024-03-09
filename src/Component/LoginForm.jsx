@@ -7,8 +7,8 @@ const LoginForm = () => {
   return (
     <div className="text-[#0B4457] ">
       <div className="flex">
-        <div className="w-[745px] h-[934px] bg-[#0E556C] flex items-center justify-center">
-          <div className="bg-[url('../src/Assets/PersonImages.svg')] w-full h-full text-white">
+        <div className="w-[745px] h-[934px] bg-[#0E556C] flex items-center justify-between ">
+          <div className="bg-[url('../src/Assets/PersonImages.svg')] bg-cover w-full h-full text-white">
             <h5 className="text-5xl font-bold ml-10 mt-[655px]">
               Find Your Confidence <br /> Here.
             </h5>
