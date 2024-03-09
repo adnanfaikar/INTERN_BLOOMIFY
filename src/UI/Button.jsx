@@ -10,7 +10,7 @@ const Button = ({
   const getButtonVariation = (variation) => {
     switch (variation) {
       case "primary":
-        return "bg-[#806C55] text-[#F3F4C3] hover:bg-[#9A8266] hover:text-white border border-[#4D4D2D] rounded-xl transition-colors ";
+        return "bg-[#0E556C] text-white hover:bg-[#398097] hover:text-white active:bg-[#06222B] border border-[#4D4D2D] rounded-xl transition-colors ";
       case "secondary":
         return "bg-white text-[#999B5A] border-2 border-[#999B5A] hover:bg-[#E6E887]          ";
       case "tertiary":

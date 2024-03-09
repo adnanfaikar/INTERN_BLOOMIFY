@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../shared/Navbar";
 import Button from "../UI/Button";
-
+import Footer from "../Component/Footer";
 const Home = () => {
   return (
     <div>
@@ -40,6 +40,7 @@ const Home = () => {
           </Button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
