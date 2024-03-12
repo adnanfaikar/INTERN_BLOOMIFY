@@ -12,7 +12,7 @@ const Button = ({
       case "primary":
         return "bg-[#0E556C] text-white hover:bg-[#398097] hover:text-white active:bg-[#06222B] border border-[#4D4D2D] rounded-xl transition-colors ";
       case "secondary":
-        return "bg-white text-[#999B5A] border-2 border-[#999B5A] hover:bg-[#E6E887]          ";
+        return "bg-white text-[#0B4457] border-2 border-[#0E556C] hover:bg-[#CFE0E6] hover:text-[#116682]";
       case "tertiary":
         return "bg-trasparent text-[#999B5A] hover:text-#[999B5A] hover:underline";
       case "tertiary-red":
