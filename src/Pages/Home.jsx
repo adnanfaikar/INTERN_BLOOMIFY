@@ -11,14 +11,14 @@ const Home = () => {
 
   return (
     <MainLayout>
-      <div className="flex justify-center items-center ">
+      <div className="flex justify-center items-center  ">
         <div class="w-full h-[432px] bg-[#CFE0E6] border border-gray-400 flex justify-center items-center ">
           <div className="bg-[url('../src/Assets/Banner-Photo.svg')] bg-cover w-[642px] h-[361px] -ml-12"></div>
-          <div className="w-[475px] h-[377px] text-left pl-10 pt-5">
-            <h6 className="font-bold text-[#093341]  flex text-3xl ">
+          <div className="w-[505px] h-[377px] text-left pl-10 pt-5">
+            <h6 className="font-semibold text-[#093341]  flex text-6xl  ">
               WELCOME TO <br /> BLOOMIFY
             </h6>
-            <p>
+            <p className="text-xl text-justify mt-5">
               Not sure where to start? Explore our informative articles, how-to
               guides, product recommendations and consultations to gain valuable
               insights into your beauty and wellness journey.
@@ -31,7 +31,7 @@ const Home = () => {
         </div>
       </div>
       <div className="m-12">
-        <h3 className="text-3xl flex items-center justify-center m-12 ">
+        <h3 className="text-3xl flex items-center justify-center m-12">
           Treatment Recommendation
         </h3>
         <div className="overflow-hidden flex justify-between m-12 my-2">
@@ -59,7 +59,7 @@ const Home = () => {
         </div>
       </div>
       <div className="mt-12 w-full h-[900px] bg-[#B0CCD5] ">
-        <h3 className="text-3xl flex items-center justify-center py-20 text-[#093341]">
+        <h3 className="text-3xl flex items-center justify-center py-20 text-[#093341] font-regular">
           Product Recomendation
         </h3>
         <div className="mx-auto w-full max-w-[1224px] flex justify-between items-center">
@@ -92,7 +92,7 @@ const Home = () => {
         </div>
       </div>
 
-      <h3 className="text-3xl flex items-center justify-center py-20 text-[#093341]">
+      <h3 className="text-3xl flex items-center justify-center py-20 text-[#093341] font-regular">
         Promo
       </h3>
       <div className="w-full h-[450px]  bg-cover bg-no-repeat bg-center">

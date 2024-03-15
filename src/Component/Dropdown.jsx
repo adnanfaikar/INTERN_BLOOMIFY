@@ -10,7 +10,7 @@ export default function Example(props) {
   return (
     <Menu as="div" className="relative inline-block text-left text-xl ">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-trasnparent px-2 py-3 text-md  text-[#0E556C] ">
+        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-trasnparent px-2 py-3 text-md  text-[#0E556C] hover:font-bold hover:italic hover:underline">
           {props.children}
           <ChevronDownIcon
             className=" mt-1 h-5 w-5 text-[#0E556C]    "
@@ -39,7 +39,7 @@ export default function Example(props) {
                     "block px-4 py-2 text-sm"
                   )}
                 >
-                  Option 1
+                  Spa & Massage
                 </a>
               )}
             </Menu.Item>
@@ -52,7 +52,33 @@ export default function Example(props) {
                     "block px-4 py-2 text-sm"
                   )}
                 >
-                  Option 2
+                  Salon
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm"
+                  )}
+                >
+                  Beauty Clinic
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm"
+                  )}
+                >
+                  Fitness Center
                 </a>
               )}
             </Menu.Item>
