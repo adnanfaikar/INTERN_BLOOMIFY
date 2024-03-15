@@ -3,6 +3,10 @@ import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import BeautyNavigator from "../Pages/BeautyNavigator";
+import PaymentSucced from "../Pages/PaymentSucced";
+import Payment from "../Pages/Payment";
+import Survey from "../Pages/Survey";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +23,18 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />,
+  },
+  {
+    path: "/PaymentSucced",
+    element: <PaymentSucced />,
+  },
+  {
+    path: "/Payment",
+    element: <Payment />,
+  },
+  {
+    path: "/Survey",
+    element: <Survey />,
   },
 ]);
 

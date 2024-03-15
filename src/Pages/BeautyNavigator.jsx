@@ -4,6 +4,7 @@ import SearchBox from "../Component/SearchBox";
 import FilterOpen from "../Component/FilterOpen";
 import FilterClose from "../Component/FilterClose";
 import ResultsCard from "../Component/ResultsCard";
+import DoctorCard from "../Component/DoctorCard";
 
 const BeautyNavigator = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -37,6 +38,14 @@ const BeautyNavigator = () => {
               handleChange={handleChange}
               handleKeyPress={handleKeyPress}
             />
+            <div className="flex justify-between mt-2">
+              <div className=" py-3 w-[410px] h-[60px] bg-[#0E556C] rounded-lg text-white text-center text-2xl ">
+                By Doctor
+              </div>
+              <div className="py-3 w-[410px] h-[60px] bg-white rounded-lg border-2 border-[#0E556C] text-center text-2xl text-[#0B4457]">
+                By Treatment
+              </div>
+            </div>
           </div>
         </div>
         <div className="flex justify-center mt-28">
@@ -76,6 +85,17 @@ const BeautyNavigator = () => {
           </div>
         </div>
       </div>
+
+      <DoctorCard
+        imageUrl={"../src/Assets/Doctor.svg"}
+        Name="Dr. Hendri Kurniawan"
+        Specialist="Dermatologist"
+        Price="Rp. 500.000"
+        Old="31"
+        Alumnus="Gadjah Mada University"
+        PracticeSite="Persada Hospital"
+        STRNumber="7124874179021"
+      />
     </MainLayout>
   );
 };

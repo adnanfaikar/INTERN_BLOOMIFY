@@ -24,7 +24,7 @@ const MiniCard = ({
           {doctor && ` | Dr.${doctor}`}
           {date && ` | ${date}`}
         </p>
-        {/* <br /> */}
+
         {description && (
           <p className="text-base mt-2 font-regular">{description}</p>
         )}

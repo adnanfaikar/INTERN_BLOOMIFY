@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "../Component/Dropdown";
-// import Button from "../UI/Button";
+
 const Navbar = () => {
   const navigate = useNavigate();
 
@@ -30,13 +30,12 @@ const Navbar = () => {
           {" "}
           Article
         </p>
-        <button
-          className="rounded-lg bg-[#0E556C] w-[100px] h-[44px] text-white mt-[6px] flex py-2 pl-5 "
+        <img
+          src="../src/Assets/ProfileIcon.svg"
+          alt=""
+          className="w-10 h-10 mt-1 cursor-pointer"
           onClick={() => navigate("/login")}
-        >
-          {/* <img src="../src/Assets/Logo/Google.svg" alt="" /> */}
-          <p className="pl-1">Sign In</p>
-        </button>
+        />
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ const FilterOpen = ({ onClick }) => {
 
   return (
     <div
-      className="filter  w-[410px] h-[208px] bg-white rounded-xl shadow-lg mr-20 ml-[80px] text-[#0B4457]"
+      className="filter  w-[410px] h-[208px] bg-white rounded-xl shadow-lg mr-20 ml-[80px] text-[#0B4457] block"
       onClick={onClick}
     >
       <div className="font-bold ml-4 mt-4 ">

@@ -3,8 +3,10 @@ import Input from "../UI/Input";
 import Button from "../UI/Button";
 import Footer from "../shared/Footer";
 import LogReg from "../Layout/LogReg";
+import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
+  const navigate = useNavigate();
   return (
     <LogReg>
       <h6 className="text-[60px]  font-bold mx-auto mt-[72px] text-center justify-center">
@@ -43,7 +45,11 @@ const RegisterForm = () => {
           onChange={(e) => setForm({ ...form, password: e.target.value })}
           required={true}
         />
-        <Button variation={"primary"} className="w-[480px] mt-[24px] mb-3">
+        <Button
+          variation={"primary"}
+          className="w-[480px] mt-[24px] mb-3"
+          onClick={() => navigate("/Login")}
+        >
           Sign Up
         </Button>
       </form>
