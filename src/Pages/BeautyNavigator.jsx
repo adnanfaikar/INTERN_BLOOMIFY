@@ -39,12 +39,13 @@ const BeautyNavigator = () => {
               handleKeyPress={handleKeyPress}
             />
             <div className="flex justify-between mt-2">
-              <div className=" py-3 w-[410px] h-[60px] bg-[#0E556C] rounded-lg text-white text-center text-2xl ">
+              <button className=" py-3 w-[410px] h-[60px] bg-[#0E556C] rounded-lg text-white text-center text-2xl ">
                 By Doctor
-              </div>
-              <div className="py-3 w-[410px] h-[60px] bg-white rounded-lg border-2 border-[#0E556C] text-center text-2xl text-[#0B4457]">
+              </button>
+
+              <button className="py-3 w-[410px] h-[60px] bg-white rounded-lg border-2 border-[#0E556C] text-center text-2xl text-[#0B4457]">
                 By Treatment
-              </div>
+              </button>
             </div>
           </div>
         </div>
