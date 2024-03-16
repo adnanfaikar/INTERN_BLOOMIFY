@@ -6,6 +6,7 @@ import BeautyNavigator from "../Pages/BeautyNavigator";
 import PaymentSucced from "../Pages/PaymentSucced";
 import Payment from "../Pages/Payment";
 import Survey from "../Pages/Survey";
+import DetailsPage from "../Pages/DetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/Survey",
     element: <Survey />,
+  },
+  {
+    path: "/Details",
+    element: <DetailsPage />,
   },
 ]);
 

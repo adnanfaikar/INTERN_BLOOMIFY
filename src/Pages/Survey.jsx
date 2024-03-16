@@ -93,8 +93,11 @@ const Survey = () => {
           />
         </div>
       </div>
-      <Button variation={"primary"} className="ml-[220px] w-[1062px] m-20">
-        <p className="text-white text-lg">See Product Recomendation</p>
+      <Button
+        variation={"primary"}
+        className="w-[1062px] mx-auto flex justify-center items-center my-20 "
+      >
+        <p className="text-white text-lg mx-auto">See Product Recomendation</p>
       </Button>
     </MainLayout>
   );

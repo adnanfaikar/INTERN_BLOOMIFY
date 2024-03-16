@@ -3,7 +3,9 @@ import MainLayout from "../Layout/MainLayout";
 const DetailsPage = () => {
   return (
     <MainLayout>
-      <div className="w-full h-[630px] bg-[]"></div>
+      <div className="w-full h-[630px] bg-[url('../src/Assets/SPA.svg')]">
+        <p>test</p>
+      </div>
     </MainLayout>
   );
 };
