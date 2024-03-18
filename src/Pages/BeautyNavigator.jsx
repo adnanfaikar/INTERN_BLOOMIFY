@@ -4,7 +4,6 @@ import SearchBox from "../Component/SearchBox";
 import FilterOpen from "../Component/FilterOpen";
 import FilterClose from "../Component/FilterClose";
 import ResultsCard from "../Component/ResultsCard";
-import DoctorCard from "../Component/DoctorCard";
 
 const BeautyNavigator = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -86,17 +85,6 @@ const BeautyNavigator = () => {
           </div>
         </div>
       </div>
-
-      <DoctorCard
-        imageUrl={"../src/Assets/Doctor.svg"}
-        Name="Dr. Hendri Kurniawan"
-        Specialist="Dermatologist"
-        Price="Rp. 500.000"
-        Old="31"
-        Alumnus="Gadjah Mada University"
-        PracticeSite="Persada Hospital"
-        STRNumber="7124874179021"
-      />
     </MainLayout>
   );
 };

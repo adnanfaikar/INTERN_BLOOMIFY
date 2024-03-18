@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import MainLayout from "../Layout/MainLayout";
+import Button from "../UI/Button";
+import { useNavigate } from "react-router-dom";
+import Notification from "../Component/Notification";
 
 const Payment = () => {
+  const navigate = useNavigate();
+  const [showNotification, setShowNotification] = useState(false);
+  const handlePayment = () => {
+    setShowNotification(true);
+  };
+  const handleCloseNotification = (confirmed) => {
+    setShowNotification(false);
+    if (confirmed) {
+      navigate("/paymentsucced");
+    }
+  };
   return (
     <MainLayout>
       <div className="w-full h-[822px] bg-[#CFE0E6] pt-20">
@@ -68,6 +82,16 @@ const Payment = () => {
                   className="mt-3 ml-16"
                 />
               </div>
+              <Button
+                variation={"primary"}
+                className="w-full mt-6"
+                onClick={handlePayment}
+              >
+                Payment Now
+              </Button>
+              {showNotification && (
+                <Notification onClose={handleCloseNotification} />
+              )}
             </div>
           </div>
         </div>

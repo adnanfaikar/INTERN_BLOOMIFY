@@ -23,7 +23,11 @@ const Home = () => {
               guides, product recommendations and consultations to gain valuable
               insights into your beauty and wellness journey.
             </p>
-            <Button variation={"primary"} className="w-full mt-10">
+            <Button
+              variation={"primary"}
+              className="w-full mt-10"
+              onClick={() => navigate("/survey")}
+            >
               Find Now
             </Button>
             <br />
@@ -37,10 +41,11 @@ const Home = () => {
         <div className="overflow-hidden flex justify-between m-12 my-2">
           <MiniCard
             imageUrl="../src/Assets/MiniCard1.svg"
-            title="How to get clear skin fast"
-            description="Many people find it difficult to get clear skin. The methods for getting clear skin will vary, depending on the person’s skin type."
+            title="Acne Peeling"
+            description="Experience transformative beauty with our exclusive skincare treatments! Unveil radiant skin and say goodbye to imperfections. "
             category="Skincare"
-            clinic="Benings Clinic"
+            clinic="ERHA "
+            onClick={() => navigate("/details")}
           />
           <MiniCard
             imageUrl="../src/Assets/MiniCard2.svg"

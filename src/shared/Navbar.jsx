@@ -1,9 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "../Component/Dropdown";
+import { useAuth } from "../Hooks/useAuth";
+import Button from "../UI/Button";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const isAuthenticated = useAuth();
 
   return (
     <div class="flex justify-between items-center py-2 px-4 bg-white shadow-md">
@@ -30,12 +33,24 @@ const Navbar = () => {
           {" "}
           Article
         </p>
-        <img
-          src="../src/Assets/ProfileIcon.svg"
-          alt=""
-          className="w-10 h-10 mt-1 cursor-pointer"
-          onClick={() => navigate("/login")}
-        />
+
+        {!isAuthenticated ? (
+          <Button
+            type={"button"}
+            variation={"primary"}
+            onClick={() => navigate("/login")}
+            className="w-[115px] h-[44px] mt-1"
+          >
+            Sign In
+          </Button>
+        ) : (
+          <img
+            src="../src/Assets/ProfileIcon.svg"
+            alt=""
+            className="w-10 h-10 mt-1 cursor-pointer"
+            onClick={() => navigate("/profile")}
+          />
+        )}
       </div>
     </div>
   );

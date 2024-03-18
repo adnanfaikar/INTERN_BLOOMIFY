@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import React from "react";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -33,7 +34,7 @@ export default function Example(props) {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="#"
+                  href="/BeautyNavigator"
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                     "block px-4 py-2 text-sm"

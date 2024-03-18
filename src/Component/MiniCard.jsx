@@ -8,9 +8,13 @@ const MiniCard = ({
   doctor,
   date,
   clinic,
+  onClick,
 }) => {
   return (
-    <div className="max-w-[392px] h-[475px] rounded-xl border-2 border-[#0B4457]  shadow-lg text-[#0B4457] text-justify">
+    <div
+      className="max-w-[392px] h-[475px] rounded-xl border-2 border-[#0B4457]  shadow-lg text-[#0B4457] text-justify cursor-pointer transition-transform duration-300 ease-in-out transform hover:-translate-y-5"
+      onClick={onClick}
+    >
       <img
         src={imageUrl}
         alt={title}

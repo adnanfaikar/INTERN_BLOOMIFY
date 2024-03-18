@@ -7,6 +7,8 @@ import PaymentSucced from "../Pages/PaymentSucced";
 import Payment from "../Pages/Payment";
 import Survey from "../Pages/Survey";
 import DetailsPage from "../Pages/DetailsPage";
+import ErrorPage from "../Pages/ErrorPage";
+import ResultPage from "../Pages/ResultPage";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
   {
     path: "/Details",
     element: <DetailsPage />,
+  },
+  {
+    path: "/Result",
+    element: <ResultPage />,
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);
 

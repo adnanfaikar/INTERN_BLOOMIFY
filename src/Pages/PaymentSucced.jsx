@@ -1,8 +1,10 @@
 import React from "react";
 import MainLayout from "../Layout/MainLayout";
 import Button from "../UI/Button";
+import { useNavigate } from "react-router-dom";
 
 const PaymentSucced = () => {
+  const navigate = useNavigate();
   return (
     <MainLayout>
       <div className="w-full h-[822px] bg-[#CFE0E6] pt-20">
@@ -18,7 +20,11 @@ const PaymentSucced = () => {
           <Button variation={"primary"}>
             <p className="text-white">Set Reminder</p>
           </Button>
-          <Button variation={"secondary"} className="ml-2">
+          <Button
+            variation={"secondary"}
+            className="ml-2"
+            onClick={() => navigate("/")}
+          >
             <p className="text-black">Back to Landing Page</p>
           </Button>
         </div>

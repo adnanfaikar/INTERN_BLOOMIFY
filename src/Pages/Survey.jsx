@@ -95,7 +95,7 @@ const Survey = () => {
       </div>
       <Button
         variation={"primary"}
-        className="w-[1062px] mx-auto flex justify-center items-center my-20 "
+        className="w-[1062px] mx-auto flex justify-center items-center my-20 "
       >
         <p className="text-white text-lg mx-auto">See Product Recomendation</p>
       </Button>

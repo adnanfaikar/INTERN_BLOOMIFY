@@ -8,9 +8,12 @@ const ResultsCard = ({
   Address,
   NormalPrice,
   Price,
+  className,
 }) => {
   return (
-    <div className="w-[1020px] h-[242px] flex bg-white rounded-2xl border-2 border-[#0B4457] shadow-xl my-10">
+    <div
+      className={`w-[1020px] h-[242px] flex bg-white rounded-2xl border-2 border-[#0B4457] shadow-xl my-10 ${className}`}
+    >
       <div className="flex">
         <img
           src={imageUrl}
