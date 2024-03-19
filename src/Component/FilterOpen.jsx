@@ -21,13 +21,15 @@ const FilterOpen = ({ onClick }) => {
 
   return (
     <div className="filter  w-[410px] h-[208px] bg-white rounded-xl shadow-lg mr-20 ml-[80px] text-[#0B4457] ">
-      <div className="flex mt-4 cursor-pointer" onClick={onClick}>
+      <div className="flex mt-4">
         <img
           src="../src/Assets/filterImage.svg"
           alt=""
           className="w-5 h-full mt-[2px] ml-4"
         />
-        <p className="font-bold">Filter: </p>
+        <p className="font-bold" onClick={onClick}>
+          Filter:{" "}
+        </p>
         <ChevronDownIcon className="h-6 w-8 text-[#0E556C] ml-[290px]" />
       </div>
 

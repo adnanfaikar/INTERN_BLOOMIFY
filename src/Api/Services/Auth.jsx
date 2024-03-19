@@ -7,6 +7,9 @@ const handleLogin = async (body) => {
       password: body.password,
     });
 
+    const token = response.data.token;
+    localStorage.setItem("token", token);
+
     return response.data;
   } catch (error) {
     throw error;

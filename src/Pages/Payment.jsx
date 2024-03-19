@@ -23,7 +23,7 @@ const Payment = () => {
           Payment
         </h2>
         <div className="flex justify-center mt-20">
-          <div className="flex items-center w-[890px] h-[306px] bg-white rounded-3xl shadow-lg mx-auto">
+          <div className="flex items-center w-[890px] h-[306px] bg-white rounded-3xl shadow-sm mx-auto">
             <div className="w-[435px] h-[177px] shadow-2xl rounded-2xl ml-7">
               <div className="w-[400px] h-16 flex">
                 <img

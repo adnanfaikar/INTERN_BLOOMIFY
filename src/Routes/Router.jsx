@@ -13,6 +13,7 @@ import BookingPage from "../Pages/BookingPage";
 import ArticlePage from "../Pages/ArticlePage";
 import Article2 from "../Pages/Article2";
 import SurveyResult from "../Pages/SurveyResult";
+import DoctorNavigator from "../Pages/DoctorNavigator";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
   {
     path: "/SurveyResult",
     element: <SurveyResult />,
+  },
+  {
+    path: "/doctorNavigator",
+    element: <DoctorNavigator />,
   },
 ]);
 

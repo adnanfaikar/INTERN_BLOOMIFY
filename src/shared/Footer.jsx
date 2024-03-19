@@ -5,23 +5,12 @@ const Footer = () => {
     <div className="w-full h-[444px] bg-[#0E556C] text-white ">
       <div className="ml-10 text-xl ">
         <div className="flex justify-between ml-3 p-5">
-          <div>
-            <h3 className="font-bold ml-2 mt-5">How Can We Help</h3>
-            <div className="cursor-pointer px-2 text-sm mt-4">
-              <p className="py-2">Contact Us</p>
-              <p className="py-2">FAQ</p>
-              <p className="py-2">Logo</p>
-            </div>
-          </div>
-
           <div className="">
             <h3 className="font-bold mt-5">Services</h3>
             <div className="cursor-pointer text-sm mt-4">
               <p className="py-2">Custom Care</p>
               <p className="py-2">Beauty Navigator</p>
-              <p className="py-2">Instant Booking</p>
               <p className="py-2">Chat Care</p>
-              <p className="py-2">Reminder Appointment</p>
             </div>
           </div>
 

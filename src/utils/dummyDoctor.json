@@ -1,0 +1,36 @@
+[
+    {
+      "id": 1,
+      "Name": "Dr. John Doe",
+      "Specialist": "Dermatologist",
+      "Price": 1200000,
+      "Old": 45,
+      "Alumnus": "Harvard University",
+      "PracticeSite": "Skin Care Clinic",
+      "STRNumber": "1234567890",
+      "imageUrl": "../src/Assets/Doctor.svg"
+    },
+    {
+      "id": 2,
+      "Name": "Dr. Jane Smith",
+      "Specialist": "Plastic Surgeon",
+      "Price": 1500000,
+      "Old": 40,
+      "Alumnus": "Yale University",
+      "PracticeSite": "Beauty Clinic",
+      "STRNumber": "0987654321",
+      "imageUrl": "../src/Assets/Doctor.svg"
+    },
+    {
+      "id": 3,
+      "Name": "Dr. Michael Johnson",
+      "Specialist": "Cosmetic Dentist",
+      "Price": 800000,
+      "Old": 38,
+      "Alumnus": "Stanford University",
+      "PracticeSite": "Dental Care Center",
+      "STRNumber": "5678901234",
+      "imageUrl": "../src/Assets/Doctor.svg"
+    }
+  ]
+  

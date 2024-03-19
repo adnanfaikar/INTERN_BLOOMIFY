@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "Title": "Klinik Kecantikan 1",
+      "Category": "Spa & Massage",
+      "Booked": 10,
+      "imageUrl": "../src/Assets/SPA1.svg",
+      "Address": "Jl. Jend. Sudirman No. 1, Jakarta",
+      "NormalPrice": 100000,
+      "Price": 80000
+    },
+    {
+      "id": 2,
+      "Title": "Klinik Kecantikan 2",
+      "Category": "Spa & Massage",
+      "Booked": 8,
+      "imageUrl": "../src/Assets/SPA1.svg",
+      "Address": "Jl. MH Thamrin No. 2, Jakarta",
+      "NormalPrice": 120000,
+      "Price": 90000
+    }
+    
+  ]
+  

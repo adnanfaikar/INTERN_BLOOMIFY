@@ -12,6 +12,7 @@ const LoginForm = () => {
     email: "",
     password: "",
   });
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,7 +37,6 @@ const LoginForm = () => {
       </p>
       <div className="w-[519px]  mx-auto mt-20 flex justify-center">
         <form onSubmit={handleSubmit}>
-          {" "}
           <p className="mt-2 font-bold">E-Mail *</p>
           <Input
             type="email"
@@ -51,12 +51,12 @@ const LoginForm = () => {
             onChange={(e) => setForm({ ...form, password: e.target.value })}
             required={true}
           />
+          {error && <p className="text-red-500">{error}</p>}{" "}
           <Button
             variation={"primary"}
             className="w-[480px] mt-[24px] mb-3"
             type="submit"
           >
-            {" "}
             Sign In
           </Button>
         </form>

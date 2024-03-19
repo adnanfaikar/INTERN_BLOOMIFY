@@ -11,7 +11,7 @@ const DoctorCard = ({
   imageUrl,
 }) => {
   return (
-    <div className="w-[335px] h-[695px] border-2 border-black rounded-2xl px-[20px] ">
+    <div className="w-[335px] h-[695px] border-2 border-black rounded-2xl px-[20px] bg-white">
       <div className=" h-[295px] w-[295px]  pt-7 ">
         <img src={imageUrl} alt="" className="rounded-xl" />
       </div>

@@ -29,7 +29,10 @@ const Navbar = () => {
           {" "}
           Promo
         </p>
-        <p className="text-xl pt-[12px] text-[#0E556C] cursor-pointer hover:underline transition-300 px-2  hover:font-bold hover:italic">
+        <p
+          className="text-xl pt-[12px] text-[#0E556C] cursor-pointer hover:underline transition-300 px-2  hover:font-bold hover:italic"
+          onClick={() => navigate("/article")}
+        >
           {" "}
           Article
         </p>
