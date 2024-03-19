@@ -7,7 +7,7 @@ const ProductCard = ({ imageUrl, title, description, price }) => {
       <img
         src={imageUrl}
         alt={title}
-        className="w-full h-[384px] rounded-xl object-cover"
+        className="w-full h-[384px] rounded-lg object-cover"
       />
       <div className="p-4">
         <h3 className="text-2xl font-bold">{title}</h3>
