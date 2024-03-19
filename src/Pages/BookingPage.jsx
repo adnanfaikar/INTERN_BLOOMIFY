@@ -1,5 +1,6 @@
 import React from "react";
 import MainLayout from "../Layout/MainLayout";
+import Date from "../Component/Date";
 const BookingPage = () => {
   return (
     <MainLayout>
@@ -9,7 +10,7 @@ const BookingPage = () => {
             <p className="text-4xl font-bold text-[#093341] text-center mt-[120px]">
               Booking{" "}
             </p>
-            <div className="w-[857px] h-[413px] shadow-lg bg-white rounded-[20px] mt-20"></div>
+            <Date />
           </div>
         </div>
       </div>

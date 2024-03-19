@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../UI/Button";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
@@ -8,6 +8,13 @@ import BannerPromo from "../Component/BannerPromo";
 
 const Home = () => {
   const navigate = useNavigate();
+  useEffect(() => {
+    document.title = "Bloomify";
+    const favicon = document.getElementById("favicon");
+    if (favicon) {
+      favicon.href = "/src/logo_dark.svg";
+    }
+  }, []);
 
   return (
     <MainLayout>
