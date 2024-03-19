@@ -2,7 +2,9 @@ import React from "react";
 import MainLayout from "../Layout/MainLayout";
 import SurveyRadioButton from "../Component/SurveyRadioButton";
 import Button from "../UI/Button";
+import { useNavigate } from "react-router-dom";
 const Survey = () => {
+  const navigate = useNavigate();
   return (
     <MainLayout>
       <p className="font-bold text-[40px] text-[#093341] text-center mt-[120px]">
@@ -96,6 +98,7 @@ const Survey = () => {
       <Button
         variation={"primary"}
         className="w-[1062px] mx-auto flex justify-center items-center my-20 "
+        onClick={() => navigate("/surveyresult")}
       >
         <p className="text-white text-lg mx-auto">See Product Recomendation</p>
       </Button>

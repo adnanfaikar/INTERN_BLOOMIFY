@@ -31,13 +31,14 @@ const Notification = ({ onClose }) => {
               <Button
                 variation={"Button-Alert"}
                 onClick={() => handleClose(false)}
+                className="ml-4 w-[193px] h-[40px]"
               >
                 No
               </Button>
               <Button
                 variation={"primary"}
                 onClick={() => handleClose(true)}
-                className="ml-4"
+                className="ml-4 w-[193px] h-[40px]"
               >
                 Yes
               </Button>

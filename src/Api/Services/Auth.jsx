@@ -15,9 +15,11 @@ const handleLogin = async (body) => {
 
 const handleRegister = async (body) => {
   try {
-    const response = await axiosInstance.post("auth/register", {
+    const response = await axiosInstance.post("api/v1/user/register", {
       email: body.email,
       password: body.password,
+      full_name: body.username,
+      confirm_password: body.confirmPassword,
     });
 
     return response.data;

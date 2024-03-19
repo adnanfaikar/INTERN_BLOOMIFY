@@ -53,6 +53,7 @@ const Home = () => {
             description="Many people find it difficult to get clear skin. The methods for getting clear skin will vary, depending on the person’s skin type. "
             category="Skincare"
             clinic="ERHA"
+            onClick={() => navigate("/details")}
           />
           <MiniCard
             imageUrl="../src/Assets/MiniCard3.svg"
@@ -60,6 +61,7 @@ const Home = () => {
             description="Many people find it difficult to get clear skin. The methods for getting clear skin will vary, depending on the person’s skin type. "
             category="Skincare"
             clinic="BUJASPA Massage & Nail Art"
+            onClick={() => navigate("/details")}
           />
         </div>
       </div>
@@ -118,16 +120,19 @@ const Home = () => {
             imageUrl="../src/Assets/MiniCard1.svg"
             title="How to get clear skin fast"
             description="Many people find it difficult to get clear skin. The methods for getting clear skin will vary, depending on the person’s skin type."
+            onClick={() => navigate("/Article")}
           />
           <MiniCard
-            imageUrl="../src/Assets/MiniCard2.svg"
-            title="9 Tricks for Healthier, Fuller-Looking Hair"
-            description="Many people find it difficult to get clear skin. The methods for getting clear skin will vary, depending on the person’s skin type. "
+            imageUrl="../src/Assets/Article_2.svg"
+            title="Healthy Hair? What Is It: The Science Behind Healthy Hair"
+            description="While genetics play a key role, your diet, the weather, pollution, and your overall. "
+            onClick={() => navigate("/Article2")}
           />
           <MiniCard
             imageUrl="../src/Assets/MiniCard3.svg"
             title="Spa and Message"
             description="Many people find it difficult to get clear skin. The methods for getting clear skin will vary, depending on the person’s skin type. "
+            onClick={() => navigate("/Article")}
           />
         </div>
       </div>

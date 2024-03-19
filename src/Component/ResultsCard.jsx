@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ResultsCard = ({
   Title,
@@ -10,6 +11,7 @@ const ResultsCard = ({
   Price,
   className,
 }) => {
+  const navigate = useNavigate();
   return (
     <div
       className={`w-[1020px] h-[242px] flex bg-white rounded-2xl border-2 border-[#0B4457] shadow-xl my-10 ${className}`}
@@ -51,7 +53,10 @@ const ResultsCard = ({
             <p className="font-semibold text-[#975039] text-2xl text-right">
               IDR. {Price}
             </p>
-            <button className="w-[189px] h-12 bg-[#822D11] rounded-lg mt-11  hover:bg-[#398097]">
+            <button
+              className="w-[189px] h-12 bg-[#822D11] rounded-lg mt-11  hover:bg-[#398097]"
+              onClick={() => navigate("/details")}
+            >
               <p className="text-2xl text-white ">Order Now</p>
             </button>
           </div>

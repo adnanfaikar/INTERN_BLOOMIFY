@@ -9,7 +9,10 @@ import Survey from "../Pages/Survey";
 import DetailsPage from "../Pages/DetailsPage";
 import ErrorPage from "../Pages/ErrorPage";
 import ResultPage from "../Pages/ResultPage";
-
+import BookingPage from "../Pages/BookingPage";
+import ArticlePage from "../Pages/ArticlePage";
+import Article2 from "../Pages/Article2";
+import SurveyResult from "../Pages/SurveyResult";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -48,8 +51,24 @@ const router = createBrowserRouter([
     element: <ResultPage />,
   },
   {
+    path: "/Booking",
+    element: <BookingPage />,
+  },
+  {
     path: "*",
     element: <ErrorPage />,
+  },
+  {
+    path: "/Article",
+    element: <ArticlePage />,
+  },
+  {
+    path: "/Article2",
+    element: <Article2 />,
+  },
+  {
+    path: "/SurveyResult",
+    element: <SurveyResult />,
   },
 ]);
 

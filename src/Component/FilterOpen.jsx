@@ -20,11 +20,8 @@ const FilterOpen = ({ onClick }) => {
   };
 
   return (
-    <div
-      className="filter  w-[410px] h-[208px] bg-white rounded-xl shadow-lg mr-20 ml-[80px] text-[#0B4457] block"
-      onClick={onClick}
-    >
-      <div className="flex mt-4">
+    <div className="filter  w-[410px] h-[208px] bg-white rounded-xl shadow-lg mr-20 ml-[80px] text-[#0B4457] ">
+      <div className="flex mt-4 cursor-pointer" onClick={onClick}>
         <img
           src="../src/Assets/filterImage.svg"
           alt=""
