@@ -11,6 +11,7 @@ import Treatment3 from "../Assets/MiniCard3.svg";
 import Product1 from "../Assets/product_image.svg";
 import Product2 from "../Assets/product_image-1.svg";
 import Article2 from "../Assets/Article_2.svg";
+import Promo from "../Assets/PromoBanner.svg";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -117,7 +118,7 @@ const Home = () => {
       </h3>
       <div className="w-full h-[450px]  bg-cover bg-no-repeat bg-center">
         <BannerPromo
-          imageUrl="../src/Assets/PromoBanner.svg"
+          imageUrl={Promo}
           title="Special Offers"
           promo="Save up to 50%"
           description="Kartini’s Day is coming! 
