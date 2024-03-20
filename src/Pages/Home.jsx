@@ -6,6 +6,11 @@ import MiniCard from "../Component/MiniCard";
 import ProductCard from "../Component/ProductCard";
 import BannerPromo from "../Component/BannerPromo";
 import Treatment1 from "../Assets/MiniCard1.svg";
+import Treatment2 from "../Assets/MiniCard2.svg";
+import Treatment3 from "../Assets/MiniCard3.svg";
+import Product1 from "../Assets/product_image.svg";
+import Product2 from "../Assets/product_image-1.svg";
+import Article2 from "../Assets/Article_2.svg";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -56,7 +61,7 @@ const Home = () => {
             onClick={() => navigate("/details")}
           />
           <MiniCard
-            imageUrl="../src/Assets/MiniCard2.svg"
+            imageUrl={Treatment2}
             title="Chemical Peeling"
             description="Many people find it difficult to get clear skin. The methods for getting clear skin will vary, depending on the person’s skin type. "
             category="Skincare"
@@ -64,7 +69,7 @@ const Home = () => {
             onClick={() => navigate("/details")}
           />
           <MiniCard
-            imageUrl="../src/Assets/MiniCard3.svg"
+            imageUrl={Treatment3}
             title="Spa and Message"
             description="Many people find it difficult to get clear skin. The methods for getting clear skin will vary, depending on the person’s skin type. "
             category="Skincare"
@@ -79,27 +84,27 @@ const Home = () => {
         </h3>
         <div className="mx-auto w-full max-w-[1224px] flex justify-between items-center">
           <ProductCard
-            imageUrl="../src/Assets/product_image.svg"
+            imageUrl={Product1}
             title="Acne Treatment"
             description="Plumping Gloss - Instant and Long-Term Volume Effect - 24h Hydration"
             price="100.000"
           />
 
           <ProductCard
-            imageUrl="../src/Assets/product_image-1.svg"
+            imageUrl={Product2}
             title="Acne Treatment"
             description="Plumping Gloss - Instant and Long-Term Volume Effect - 24h Hydration"
             price="100.000"
           />
           <ProductCard
-            imageUrl="../src/Assets/product_image.svg"
+            imageUrl={Product1}
             title="Acne Treatment"
             description="Plumping Gloss - Instant and Long-Term Volume Effect - 24h Hydration"
             price="100.000"
           />
 
           <ProductCard
-            imageUrl="../src/Assets/product_image-1.svg"
+            imageUrl={Product2}
             title="Acne Treatment"
             description="Plumping Gloss - Instant and Long-Term Volume Effect - 24h Hydration"
             price="100.000"
@@ -125,19 +130,19 @@ const Home = () => {
         </h3>
         <div className="overflow-hidden flex justify-between m-12 my-2">
           <MiniCard
-            imageUrl="../src/Assets/MiniCard1.svg"
+            imageUrl={Treatment1}
             title="How to get clear skin fast"
             description="Many people find it difficult to get clear skin. The methods for getting clear skin will vary, depending on the person’s skin type."
             onClick={() => navigate("/Article")}
           />
           <MiniCard
-            imageUrl="../src/Assets/Article_2.svg"
+            imageUrl={Article2}
             title="Healthy Hair? What Is It: The Science Behind Healthy Hair"
             description="While genetics play a key role, your diet, the weather, pollution, and your overall. "
             onClick={() => navigate("/Article2")}
           />
           <MiniCard
-            imageUrl="../src/Assets/MiniCard3.svg"
+            imageUrl={Treatment3}
             title="Spa and Message"
             description="Many people find it difficult to get clear skin. The methods for getting clear skin will vary, depending on the person’s skin type. "
             onClick={() => navigate("/Article")}
