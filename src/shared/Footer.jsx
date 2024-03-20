@@ -1,4 +1,11 @@
 import React from "react";
+import Instagram from "../Assets/Logo/instagram.svg";
+import Facebook from "../Assets/Logo/_Facebook.svg";
+import Tiktok from "../Assets/Logo/_TikTok.svg";
+import Twitter from "../Assets/Logo/_Twitter.svg";
+import Pinterest from "../Assets/Logo/_Pinterest.svg";
+import Telephone from "../Assets/telephone.svg";
+import Location from "../Assets/location.svg";
 
 const Footer = () => {
   return (
@@ -26,18 +33,13 @@ const Footer = () => {
       <div className="w-full h-[70px] bg-[#0B4457] flex justify-between ">
         <div className="flex justify-center ml-3">
           <div className="flex items-center justify-center">
-            <img
-              src="../src/Assets/location.svg"
-              alt=""
-              sizes="10px"
-              srcset=""
-            />
+            <img src={Location} alt="" sizes="10px" srcset="" />
             <p className="">Jakarta, Indonesia </p>
           </div>
           <div className="flex items-center justify-center ml-4">
             <p className="text-[#0E556C]"> |</p>
             <img
-              src="../src/Assets/telephone.svg"
+              src={Telephone}
               alt=""
               sizes="10px"
               srcset=""
@@ -48,42 +50,35 @@ const Footer = () => {
         </div>
         <div className="flex justify-between mr-[50px] mt-[5px]">
           <img
-            src="..\src\Assets\Logo\instagram.svg"
+            src={Instagram}
             width={"65px"}
             height={"65px"}
             alt=""
             className="pl-8 p-2 cursor-pointer"
           />
           <img
-            src="..\src\Assets\Logo\_Facebook.svg"
+            src={Facebook}
             width={"65px"}
             height={"65px"}
             alt=""
             className="pl-8 p-2 cursor-pointer"
           />
           <img
-            src="..\src\Assets\Logo\_Tiktok.svg"
+            src={Tiktok}
             width={"65px"}
             height={"65px"}
             alt=""
             className="pl-8 p-2 cursor-pointer"
           />
           <img
-            src="..\src\Assets\Logo\_Twitter.svg"
+            src={Twitter}
             width={"65px"}
             height={"65px"}
             alt=""
             className="pl-8 p-2 cursor-pointer"
           />
           <img
-            src="..\src\Assets\Logo\_Pinterest.svg"
-            width={"65px"}
-            height={"65px"}
-            alt=""
-            className="pl-8 p-2 cursor-pointer"
-          />
-          <img
-            src="..\src\Assets\Logo\_Tiktok.svg"
+            src={Pinterest}
             width={"65px"}
             height={"65px"}
             alt=""

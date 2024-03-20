@@ -1,11 +1,11 @@
 import React from "react";
-
+import SearchIcon from "../Assets/SearchIcon.svg";
 const SearchBox = ({ handleChange, handleKeyPress }) => {
   return (
     <div className="flex items-center shadow-lg">
       <div className="relative w-full">
         <img
-          src="../src/Assets/SearchIcon.svg"
+          src={SearchIcon}
           alt=""
           className="absolute left-0 ml-2 mt-2 h-6 w-6 pointer-events-none"
         />

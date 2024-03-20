@@ -4,7 +4,6 @@ const DoctorCard = ({
   Name,
   Specialist,
   Price,
-  Old,
   Alumnus,
   PracticeSite,
   STRNumber,
@@ -20,7 +19,7 @@ const DoctorCard = ({
       <p className="text-xl text-[#C6362E] pt-[8px]">IDR {Price}</p>
       <div className="flex pt-[8px]">
         <div className="w-16 h-[18px] bg-[#B0CCD5] rounded-[20px]">
-          <p className="text-[8px] pt-[3px] pl-2">{Old} Years Old</p>
+          <p className="text-[8px] pt-[3px] pl-2">31 Years Old</p>
         </div>
         <div className="flex ml-2">
           <img src="../src/Assets/STAR.svg" alt="" className="w-5 h-5 mx-1" />

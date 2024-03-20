@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import Filter from "../Assets/filterImage.svg";
 
 const FilterOpen = ({ onClick }) => {
   const [filters, setFilters] = useState([]);

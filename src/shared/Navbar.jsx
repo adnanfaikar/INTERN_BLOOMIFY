@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Dropdown from "../Component/Dropdown";
 import { useAuth } from "../Hooks/useAuth";
 import Button from "../UI/Button";
+import Logo from "../Assets/logo_dark.svg";
+import ProfileIcon from "../Assets/ProfileIcon.svg";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -11,7 +13,7 @@ const Navbar = () => {
   return (
     <div class="flex justify-between items-center py-2 px-4 bg-white shadow-md">
       <img
-        src="../src/Assets/logo_dark.svg"
+        src={Logo}
         width={"80px"}
         height={"80px"}
         alt=""
@@ -48,7 +50,7 @@ const Navbar = () => {
           </Button>
         ) : (
           <img
-            src="../src/Assets/ProfileIcon.svg"
+            src={ProfileIcon}
             alt=""
             className="w-10 h-10 mt-1 cursor-pointer"
             onClick={() => navigate("/profile")}

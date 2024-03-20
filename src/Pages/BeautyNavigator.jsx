@@ -5,8 +5,7 @@ import FilterOpen from "../Component/FilterOpen";
 import FilterClose from "../Component/FilterClose";
 import DoctorCard from "../Component/DoctorCard";
 import ResultsCard from "../Component/ResultsCard";
-import dummyDoctor from "../utils/dummyDoctor.json";
-import dummyTreatment from "../utils/dummy.json";
+import { handleSorting } from "../Api/Services/Sorting";
 import { useNavigate } from "react-router-dom";
 
 const BeautyNavigator = () => {
@@ -20,20 +19,32 @@ const BeautyNavigator = () => {
     setCategory(newCategory);
   };
 
-  const dummyData = category === "doctor" ? dummyDoctor : dummyTreatment;
-
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      console.log("Search term:", searchTerm);
+      handleSearch();
     }
   };
 
   const toggleFilter = () => {
     setIsFilterOpen(!isFilterOpen);
+  };
+
+  const handleSearch = async () => {
+    try {
+      const response = await handleSorting({
+        city: searchTerm,
+        price: "",
+        rating: "",
+        page: 1,
+      });
+      setSearchResults(response.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
 
   return (
@@ -82,31 +93,30 @@ const BeautyNavigator = () => {
             <div className="my-3">
               {category === "doctor" ? (
                 <div className="flex space-x-10">
-                  {dummyData.map((item) => (
+                  {searchResults.map((item) => (
                     <DoctorCard
-                      key={item.id}
-                      Name={item.Name}
-                      Specialist={item.Specialist}
-                      Price={item.Price}
-                      Old={item.Old}
-                      Alumnus={item.Alumnus}
-                      PracticeSite={item.PracticeSite}
-                      STRNumber={item.STRNumber}
+                      key={item.docter_id}
+                      Name={item.doctor_name}
+                      Specialist={item.profession}
+                      Price={item.price}
+                      Alumnus={item.alumnus}
+                      PracticeSite={item.practice_site}
+                      STRNumber={item.str_number}
                       imageUrl={item.imageUrl}
                     />
                   ))}
                 </div>
               ) : (
-                dummyData.map((item) => (
+                searchResults.map((item) => (
                   <ResultsCard
                     key={item.id}
-                    Title={item.Title}
-                    Category={item.Category}
+                    Title={item.name}
+                    Category={item.category}
                     Booked={item.Booked}
-                    imageUrl={item.imageUrl}
-                    Address={item.Address}
+                    imageUrl={item.photo_link}
+                    Address={item.address}
                     NormalPrice={item.NormalPrice}
-                    Price={item.Price}
+                    Price={item.price}
                   />
                 ))
               )}
