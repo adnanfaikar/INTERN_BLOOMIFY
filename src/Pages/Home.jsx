@@ -5,6 +5,7 @@ import MainLayout from "../Layout/MainLayout";
 import MiniCard from "../Component/MiniCard";
 import ProductCard from "../Component/ProductCard";
 import BannerPromo from "../Component/BannerPromo";
+import Treatment1 from "../Assets/MiniCard1.svg";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -47,7 +48,7 @@ const Home = () => {
         </h3>
         <div className="overflow-hidden flex justify-between m-12 my-2">
           <MiniCard
-            imageUrl="../src/Assets/MiniCard1.svg"
+            imageUrl={Treatment1}
             title="Acne Peeling"
             description="Experience transformative beauty with our exclusive skincare treatments! Unveil radiant skin and say goodbye to imperfections. "
             category="Skincare"

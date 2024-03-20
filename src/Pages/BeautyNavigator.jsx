@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import MainLayout from "../Layout/MainLayout";
 import SearchBox from "../Component/SearchBox";
 import FilterOpen from "../Component/FilterOpen";
 import FilterClose from "../Component/FilterClose";
+import DoctorCard from "../Component/DoctorCard";
 import ResultsCard from "../Component/ResultsCard";
-import dummy from "../utils/dummy";
+import dummyDoctor from "../utils/dummyDoctor.json";
+import dummyTreatment from "../utils/dummy.json";
 import { useNavigate } from "react-router-dom";
+
 const BeautyNavigator = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
-  const dummyData = dummy;
-  const navigate = useNavigate();
+  const [category, setCategory] = useState("doctor");
 
-  useEffect(() => {
-    const filteredData = dummyData.filter((item) =>
-      item.Title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setSearchResults(filteredData);
-  }, [searchTerm]);
+  const handleCategoryChange = (newCategory) => {
+    setCategory(newCategory);
+  };
+
+  const dummyData = category === "doctor" ? dummyDoctor : dummyTreatment;
 
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
@@ -50,13 +52,23 @@ const BeautyNavigator = () => {
             />
             <div className="flex justify-between mt-2">
               <button
-                className=" py-3 w-[410px] h-[60px] bg-white rounded-lg border-2 border-[#0E556C] text-[#0B4457] text-center text-2xl "
-                onClick={() => navigate("/doctorNavigator")}
+                className={`py-3 w-[410px] h-[60px] ${
+                  category === "doctor"
+                    ? "bg-[#0E556C] text-white"
+                    : "bg-white border-2 border-[#0E556C] text-[#0B4457]"
+                } rounded-lg text-center text-2xl`}
+                onClick={() => handleCategoryChange("doctor")}
               >
                 By Doctor
               </button>
-
-              <button className="py-3 w-[410px] h-[60px]  bg-[#0E556C] rounded-lg border-2 border-[#0E556C] text-center text-2xl text-white">
+              <button
+                className={`py-3 w-[410px] h-[60px] ${
+                  category === "treatment"
+                    ? "bg-[#0E556C] text-white"
+                    : "bg-white border-2 border-[#0E556C] text-[#0B4457]"
+                } rounded-lg text-center text-2xl`}
+                onClick={() => handleCategoryChange("treatment")}
+              >
                 By Treatment
               </button>
             </div>
@@ -65,21 +77,39 @@ const BeautyNavigator = () => {
         <div className="flex justify-center mt-28">
           <div>
             <p className="text-4xl text-[#093341] font-bold text-center">
-              Most Popular Spa & Massage
+              Most Popular
             </p>
             <div className="my-3">
-              {searchResults.map((item) => (
-                <ResultsCard
-                  key={item.id}
-                  Title={item.Title}
-                  Category={item.Category}
-                  Booked={item.Booked}
-                  imageUrl={item.imageUrl}
-                  Address={item.Address}
-                  NormalPrice={item.NormalPrice}
-                  Price={item.Price}
-                />
-              ))}
+              {category === "doctor" ? (
+                <div className="flex space-x-10">
+                  {dummyData.map((item) => (
+                    <DoctorCard
+                      key={item.id}
+                      Name={item.Name}
+                      Specialist={item.Specialist}
+                      Price={item.Price}
+                      Old={item.Old}
+                      Alumnus={item.Alumnus}
+                      PracticeSite={item.PracticeSite}
+                      STRNumber={item.STRNumber}
+                      imageUrl={item.imageUrl}
+                    />
+                  ))}
+                </div>
+              ) : (
+                dummyData.map((item) => (
+                  <ResultsCard
+                    key={item.id}
+                    Title={item.Title}
+                    Category={item.Category}
+                    Booked={item.Booked}
+                    imageUrl={item.imageUrl}
+                    Address={item.Address}
+                    NormalPrice={item.NormalPrice}
+                    Price={item.Price}
+                  />
+                ))
+              )}
             </div>
           </div>
         </div>
