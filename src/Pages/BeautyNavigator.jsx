@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MainLayout from "../Layout/MainLayout";
 import SearchBox from "../Component/SearchBox";
 import FilterOpen from "../Component/FilterOpen";
 import FilterClose from "../Component/FilterClose";
 import DoctorCard from "../Component/DoctorCard";
 import ResultsCard from "../Component/ResultsCard";
-import { handleSorting } from "../Api/Services/Sorting";
+import { handleSorting, handleDoctor } from "../Api/Services/Sorting";
 import { useNavigate } from "react-router-dom";
 
 const BeautyNavigator = () => {
@@ -35,21 +35,47 @@ const BeautyNavigator = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await handleSorting({
-        city: searchTerm,
-        price: "",
-        rating: "",
-        page: 1,
-      });
+      const response =
+        category === "doctor"
+          ? await handleDoctor(searchTerm, "", "", 1)
+          : await handleSorting(searchTerm, "", "", 1);
+
       setSearchResults(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
+  // Split doctors into rows with maximum 3 items per row
+  const splitDoctorsIntoRows = (doctors) => {
+    const result = [];
+    const numColumns = 3;
+    let currentRow = [];
+    doctors.forEach((doctor, index) => {
+      currentRow.push(
+        <DoctorCard
+          key={doctor.docter_id}
+          Name={doctor.doctor_name}
+          Specialist={doctor.profession}
+          Price={doctor.price}
+          Alumnus={doctor.alumnus}
+          PracticeSite={doctor.practice_site}
+          STRNumber={doctor.str_number}
+          imageUrl={doctor.photo_link}
+          old={doctor.age}
+        />
+      );
+      if (currentRow.length === numColumns || index === doctors.length - 1) {
+        result.push(currentRow);
+        currentRow = []; // Reset currentRow for the next row
+      }
+    });
+    return result;
+  };
+
   return (
     <MainLayout>
-      <div className="w-full h-[1440px] bg-[#CFE0E6] pt-20">
+      <div className="w-full bg-[#CFE0E6] pt-20">
         <div className="flex">
           {isFilterOpen ? (
             <FilterOpen onClick={toggleFilter} />
@@ -85,25 +111,18 @@ const BeautyNavigator = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-28">
+        <div className="flex justify-center mt-28 overflow-auto">
           <div>
             <p className="text-4xl text-[#093341] font-bold text-center">
               Most Popular
             </p>
             <div className="my-3">
               {category === "doctor" ? (
-                <div className="flex space-x-10">
-                  {searchResults.map((item) => (
-                    <DoctorCard
-                      key={item.docter_id}
-                      Name={item.doctor_name}
-                      Specialist={item.profession}
-                      Price={item.price}
-                      Alumnus={item.alumnus}
-                      PracticeSite={item.practice_site}
-                      STRNumber={item.str_number}
-                      imageUrl={item.imageUrl}
-                    />
+                <div>
+                  {splitDoctorsIntoRows(searchResults).map((row, index) => (
+                    <div key={index} className="flex mb-4 space-x-16">
+                      {row}
+                    </div>
                   ))}
                 </div>
               ) : (
@@ -120,7 +139,7 @@ const BeautyNavigator = () => {
                   />
                 ))
               )}
-            </div>
+            </div>{" "}
           </div>
         </div>
       </div>

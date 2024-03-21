@@ -119,7 +119,7 @@ const DetailsPage = () => {
         <Button
           variation={"primary"}
           className="w-full my-[100px]"
-          onClick={() => navigate("/payment")}
+          onClick={() => navigate("/Booking")}
         >
           <p className="text-white">Book Now</p>
         </Button>

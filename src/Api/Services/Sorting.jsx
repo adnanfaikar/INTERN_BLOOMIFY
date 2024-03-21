@@ -18,4 +18,19 @@ const handleSorting = async (city, price, rating, page) => {
   }
 };
 
-export { handleSorting };
+const handleDoctor = async (city, price, rating, page) => {
+  try {
+    const response = await axiosInstance.get("api/v1/service/doctor/search", {
+      city,
+      price,
+      rating,
+      page,
+    });
+    console.log("Response:", response.data);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export { handleSorting, handleDoctor };

@@ -14,6 +14,9 @@ import ArticlePage from "../Pages/ArticlePage";
 import Article2 from "../Pages/Article2";
 import SurveyResult from "../Pages/SurveyResult";
 import PaymentFailed from "../Pages/PaymentFailed";
+import WaitingPayment from "../Pages/WaitingPayment";
+import ProfilePage from "../Pages/ProfilePage";
+import ReminderPage from "../Pages/ReminderPage";
 
 const router = createBrowserRouter([
   {
@@ -73,8 +76,20 @@ const router = createBrowserRouter([
     element: <SurveyResult />,
   },
   {
+    path: "/WaitingPayment",
+    element: <WaitingPayment />,
+  },
+  {
+    path: "/Profile",
+    element: <ProfilePage />,
+  },
+  {
     path: "/paymentfailed",
     element: <PaymentFailed />,
+  },
+  {
+    path: "/reminder",
+    element: <ReminderPage />,
   },
 ]);
 

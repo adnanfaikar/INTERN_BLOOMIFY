@@ -14,7 +14,11 @@ const PaymentSucced = () => {
         </h2>
         <img src={SuccedIcon} alt="" className="mx-auto mt-[120px] w-32 h-32" />
         <div className="flex justify-center mt-32 ">
-          <Button variation={"primary"} className="w-[302px] h-[54px]">
+          <Button
+            variation={"primary"}
+            className="w-[302px] h-[54px]"
+            onClick={() => navigate("/reminder")}
+          >
             <p className="text-white">Set Reminder</p>
           </Button>
           <Button

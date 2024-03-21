@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../UI/Button";
+import { handleBooking } from "../Api/Services/Booking";
 
 const DatePicker = () => {
   const tanggalSekarang = new Date();
@@ -28,7 +29,7 @@ const DatePicker = () => {
       for (let j = 0; j < 60; j += 60) {
         const hour = i.toString().padStart(2, "0");
         const minute = j.toString().padStart(2, "0");
-        const timeString = `${hour}:${minute}`;
+        const timeString = `${hour}.${minute}`;
         buttons.push(
           <button
             key={timeString}
@@ -76,32 +77,45 @@ const DatePicker = () => {
     setSelectedTime(time);
   };
 
-  const handleSubmit = () => {
-    // Mengirim data tanggal dan waktu terpilih ke backend
-    console.log("Selected Date:", selectedDate);
-    console.log("Selected Time:", selectedTime);
-    // Lakukan request ke backend untuk menyimpan data
+  const handleSubmit = async () => {
+    try {
+      if (selectedDate && selectedTime) {
+        // Memanggil fungsi booking dengan data yang dipilih
+        const response = await handleBooking(
+          258,
+          selectedDate,
+          selectedTime,
+          "bca"
+        );
+        // Handle respons dari API booking di sini
+        console.log("Booking successful:", response);
+      } else {
+        console.log("Please select both date and time.");
+      }
+    } catch (error) {
+      console.error("Error booking:", error);
+    }
   };
 
   return (
     <div className="w-[857px] h-[413px] shadow-lg bg-white rounded-[20px] mt-20">
       <p className="font-medium text-2xl text-PP80 text-center pt-5">
-        Choose Date you want to remind
+        Choose the date you want
       </p>
-      <div className="flex overflow-x-auto space-x-10 ml-7 mt-6 w-[805px] text-PP80 text-lg">
+      <div className="flex overflow-x-auto space-x-10 ml-7 mt-6 w-[805px] text-PP80 text-lg pb-4">
         {renderButtons()}
       </div>
       <p className="font-medium text-2xl text-PP80 text-center mt-10">
-        Choose the time you want to remind
+        Choose the time you want
       </p>
       <div className="flex overflow-x-auto space-x-10 ml-7 mt-10 w-[805px] text-PP80 text-lg">
         {generateTimeButtons()}
       </div>
       <Button
         variation={"primary"}
-        className="w-[809px] ml-7 mt-10"
-        onClick={handleSubmit}
-        disabled={!selectedDate || !selectedTime} // Tombol "Done" akan dinonaktifkan jika tidak ada tanggal atau waktu yang dipilih
+        className="w-[809px] ml-7 mt-5"
+        onClick={handleSubmit} // Panggil handleSubmit saat tombol "Done" ditekan
+        disabled={!selectedDate || !selectedTime}
       >
         Done
       </Button>
