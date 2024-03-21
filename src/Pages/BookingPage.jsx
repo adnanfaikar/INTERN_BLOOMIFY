@@ -1,6 +1,6 @@
 import React from "react";
 import MainLayout from "../Layout/MainLayout";
-import Date from "../Component/Date";
+import DatePicker from "../Component/DatePicker";
 const BookingPage = () => {
   return (
     <MainLayout>
@@ -10,7 +10,7 @@ const BookingPage = () => {
             <p className="text-4xl font-bold text-[#093341] text-center mt-[120px]">
               Booking{" "}
             </p>
-            <Date />
+            <DatePicker />
           </div>
         </div>
       </div>
