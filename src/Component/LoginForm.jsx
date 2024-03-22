@@ -19,10 +19,11 @@ const LoginForm = () => {
 
     try {
       const userData = await handleLogin(form);
-      window.localStorage.setItem("token", userData.Token);
+      window.localStorage.setItem("token", userData.token);
       console.log("Login successful! User data:", userData);
-      // navigate("/");
-      console.log(userData.Token);
+      navigate("/");
+      console.log(userData.token);
+      console.log(userData.message);
     } catch (error) {
       console.error("Login failed:", error.message);
       setError("Invalid email or password.");

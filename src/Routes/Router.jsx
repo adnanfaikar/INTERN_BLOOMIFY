@@ -19,47 +19,29 @@ import ProfilePage from "../Pages/ProfilePage";
 import ReminderPage from "../Pages/ReminderPage";
 import PersonalizePage from "../Pages/PersonalizePage";
 
+import ProtectedRoute from "./ProtectedRoute";
+import AuthRoute from "./AuthRoute";
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
   },
   {
-    path: "/login",
-    element: <Login />,
+    element: <AuthRoute />,
+    children: [
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+    ],
   },
-  {
-    path: "/BeautyNavigator",
-    element: <BeautyNavigator />,
-  },
-  {
-    path: "/register",
-    element: <Register />,
-  },
-  {
-    path: "/PaymentSucced",
-    element: <PaymentSucced />,
-  },
-  {
-    path: "/Payment",
-    element: <Payment />,
-  },
-  {
-    path: "/Survey",
-    element: <Survey />,
-  },
-  {
-    path: "/Details",
-    element: <DetailsPage />,
-  },
-  {
-    path: "/Result",
-    element: <ResultPage />,
-  },
-  {
-    path: "/Booking",
-    element: <BookingPage />,
-  },
+
+  ,
   {
     path: "*",
     element: <ErrorPage />,
@@ -72,29 +54,67 @@ const router = createBrowserRouter([
     path: "/Article2",
     element: <Article2 />,
   },
+
   {
-    path: "/SurveyResult",
-    element: <SurveyResult />,
-  },
-  {
-    path: "/WaitingPayment",
-    element: <WaitingPayment />,
-  },
-  {
-    path: "/Profile",
-    element: <ProfilePage />,
-  },
-  {
-    path: "/paymentfailed",
-    element: <PaymentFailed />,
-  },
-  {
-    path: "/Personalize",
-    element: <PersonalizePage />,
-  },
-  {
-    path: "/reminder",
-    element: <ReminderPage />,
+    element: <ProtectedRoute />,
+    children: [
+      {
+        path: "/Profile",
+        element: <ProfilePage />,
+      },
+      {
+        path: "/Reminder",
+        element: <ReminderPage />,
+      },
+      {
+        path: "/Personalize",
+        element: <PersonalizePage />,
+      },
+      {
+        path: "/Booking",
+        element: <BookingPage />,
+      },
+      {
+        path: "/Payment",
+        element: <Payment />,
+      },
+      {
+        path: "/Survey",
+        element: <Survey />,
+      },
+      {
+        path: "/Details",
+        element: <DetailsPage />,
+      },
+      {
+        path: "/Result",
+        element: <ResultPage />,
+      },
+      {
+        path: "/SurveyResult",
+        element: <SurveyResult />,
+      },
+      {
+        path: "/WaitingPayment",
+        element: <WaitingPayment />,
+      },
+      {
+        path: "/PaymentSucced",
+        element: <PaymentSucced />,
+      },
+      {
+        path: "/PaymentFailed",
+        element: <PaymentFailed />,
+      },
+      {
+        path: "/reminder",
+        element: <ReminderPage />,
+      },
+      {
+        path: "/BeautyNavigator",
+        element: <BeautyNavigator />,
+      },
+    ],
   },
 ]);
 

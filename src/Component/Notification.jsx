@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "../UI/Button";
+import closeIcon from "../Assets/closeIcon.svg";
 
 const Notification = ({ onClose }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,7 +25,7 @@ const Notification = ({ onClose }) => {
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
               onClick={() => handleClose(false)}
             >
-              <img src="../src/Assets/closeIcon.svg" alt="" />
+              <img src={closeIcon} alt="" />
             </button>
             <p className="text-lg font-semibold mb-4">Are You Sure?</p>
             <div className="flex">

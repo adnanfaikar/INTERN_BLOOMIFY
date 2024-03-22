@@ -7,6 +7,8 @@ import DoctorCard from "../Component/DoctorCard";
 import ResultsCard from "../Component/ResultsCard";
 import { handleSorting, handleDoctor } from "../Api/Services/Sorting";
 import { useNavigate } from "react-router-dom";
+import dummy from "../utils/dummy.json";
+import dummyData from "../utils/dummyDoctor.json";
 
 const BeautyNavigator = () => {
   const navigate = useNavigate();
@@ -74,7 +76,7 @@ const BeautyNavigator = () => {
 
   return (
     <MainLayout>
-      <div className="w-full bg-[#CFE0E6] pt-20 ">
+      <div className="w-full bg-[#CFE0E6] min-h-screen pt-20 ">
         <div className="flex">
           {isFilterOpen ? (
             <FilterOpen onClick={toggleFilter} />

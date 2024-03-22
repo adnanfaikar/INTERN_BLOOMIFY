@@ -13,7 +13,7 @@ const Payment = () => {
   const handleCloseNotification = (confirmed) => {
     setShowNotification(false);
     if (confirmed) {
-      navigate("/paymentsucced");
+      navigate("/payment");
     }
   };
   return (

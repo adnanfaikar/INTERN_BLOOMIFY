@@ -95,7 +95,6 @@ const DatePicker = ({ isBooking }) => {
           "bca"
         );
         console.log("Booking response:", response);
-        // Periksa pesan dari BE
         if (response.message === "successfully create booking") {
           navigate("/Payment");
         } else {

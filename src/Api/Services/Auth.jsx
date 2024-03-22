@@ -1,16 +1,14 @@
 import { axiosInstance } from "../CoreApi";
 
 const handleLogin = async (body) => {
-  console.log("masuk");
   try {
     const response = await axiosInstance.post("api/v1/user/login", {
       email: body.email,
       password: body.password,
     });
 
-    const token = response.data.Token;
+    const token = response.data.token;
     window.localStorage.setItem("token", token);
-    console.log("Token:", token);
     return response.data;
   } catch (error) {
     throw error;

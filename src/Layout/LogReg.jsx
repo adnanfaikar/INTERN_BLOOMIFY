@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../shared/Footer";
 import { useNavigate } from "react-router-dom";
-
+import Logo from "../Assets/logo_dark.svg";
 const LogReg = ({ children }) => {
   const navigate = useNavigate();
   return (
@@ -10,7 +10,7 @@ const LogReg = ({ children }) => {
         <div className="w-[745px] h-[934px] bg-[#0E556C] flex items-center justify-between ">
           <div className="bg-[url('../src/Assets/PersonImages.svg')] bg-cover w-full h-full text-white">
             <img
-              src="../src/Assets/logo_dark.svg"
+              src={Logo}
               alt=""
               className="mt-3 ml-4 cursor-pointer"
               onClick={() => navigate("/")}
