@@ -14,10 +14,10 @@ const ProductCard = ({ imageUrl, title, description, price }) => {
         {description && <p className="text-sm">{description}</p>}
         <p className="text-lg font-bold mt-4">IDR {price}</p>
         <Button
-          variation={"secondary"}
-          className="w-[132px] h-[39px] flex items-center justify-center mx-auto mt-5"
+          variation={"primary"}
+          className="w-[132px] h-[39px] flex items-center justify-center mx-auto mt-5 bg-gray-500 text-white rounded-lg"
         >
-          <p>Buy Now</p>
+          Buy Now
         </Button>
       </div>
     </div>

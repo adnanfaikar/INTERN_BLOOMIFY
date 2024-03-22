@@ -4,7 +4,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 const FilterClose = ({ onClick }) => {
   return (
     <div
-      className=" w-[410px] h-[60px] bg-white rounded-xl shadow-lg mr-20 ml-[80px] text-[#0B4457] cursor-pointer transition"
+      className=" xl:w-[410px] md:w-[300px] h-[60px] bg-white rounded-xl shadow-lg mr-20 ml-[80px] text-[#0B4457] cursor-pointer transition"
       onClick={onClick}
     >
       <div className="flex mt-4">

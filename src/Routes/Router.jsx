@@ -17,6 +17,7 @@ import PaymentFailed from "../Pages/PaymentFailed";
 import WaitingPayment from "../Pages/WaitingPayment";
 import ProfilePage from "../Pages/ProfilePage";
 import ReminderPage from "../Pages/ReminderPage";
+import PersonalizePage from "../Pages/PersonalizePage";
 
 const router = createBrowserRouter([
   {
@@ -86,6 +87,10 @@ const router = createBrowserRouter([
   {
     path: "/paymentfailed",
     element: <PaymentFailed />,
+  },
+  {
+    path: "/Personalize",
+    element: <PersonalizePage />,
   },
   {
     path: "/reminder",

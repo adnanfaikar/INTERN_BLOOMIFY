@@ -11,7 +11,7 @@ const ReminderPage = () => {
             <p className="text-4xl font-bold text-[#093341] text-center mt-[120px]">
               Reminder Appointment{" "}
             </p>
-            <DatePicker />
+            <DatePicker isBooking={false} />
           </div>
         </div>
       </div>

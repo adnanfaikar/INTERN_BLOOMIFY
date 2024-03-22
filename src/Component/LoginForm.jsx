@@ -3,8 +3,8 @@ import Input from "../UI/Input";
 import Button from "../UI/Button";
 
 import LogReg from "../Layout/LogReg";
-import { handleLogin } from "../Api/Services/Auth";
 import { useNavigate } from "react-router-dom";
+import { handleLogin } from "../Api/Services/Auth";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -16,11 +16,13 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const userData = await handleLogin(form);
-
+      window.localStorage.setItem("token", userData.Token);
       console.log("Login successful! User data:", userData);
-      navigate("/");
+      // navigate("/");
+      console.log(userData.Token);
     } catch (error) {
       console.error("Login failed:", error.message);
       setError("Invalid email or password.");

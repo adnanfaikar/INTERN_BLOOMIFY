@@ -46,7 +46,6 @@ const BeautyNavigator = () => {
     }
   };
 
-  // Split doctors into rows with maximum 3 items per row
   const splitDoctorsIntoRows = (doctors) => {
     const result = [];
     const numColumns = 3;
@@ -67,7 +66,7 @@ const BeautyNavigator = () => {
       );
       if (currentRow.length === numColumns || index === doctors.length - 1) {
         result.push(currentRow);
-        currentRow = []; // Reset currentRow for the next row
+        currentRow = [];
       }
     });
     return result;
@@ -75,23 +74,23 @@ const BeautyNavigator = () => {
 
   return (
     <MainLayout>
-      <div className="w-full bg-[#CFE0E6] pt-20">
+      <div className="w-full bg-[#CFE0E6] pt-20 ">
         <div className="flex">
           {isFilterOpen ? (
             <FilterOpen onClick={toggleFilter} />
           ) : (
             <FilterClose onClick={toggleFilter} />
           )}
-          <div className="w-[844px] h-[50px]">
+          <div className="xl:w-[844px] h-[50px] md:w-[600px]">
             <SearchBox
               handleChange={handleChange}
               handleKeyPress={handleKeyPress}
             />
-            <div className="flex justify-between mt-2">
+            <div className="flex xl:justify-center space-x-6 mt-2">
               <button
-                className={`py-3 w-[410px] h-[60px] ${
+                className={`py-3 w-[410px] xl:w-[410px]  md:w-[300px] h-[60px] ${
                   category === "doctor"
-                    ? "bg-[#0E556C] text-white"
+                    ? "bg-[#0E556C]  text-white"
                     : "bg-white border-2 border-[#0E556C] text-[#0B4457]"
                 } rounded-lg text-center text-2xl`}
                 onClick={() => handleCategoryChange("doctor")}
@@ -99,10 +98,10 @@ const BeautyNavigator = () => {
                 By Doctor
               </button>
               <button
-                className={`py-3 w-[410px] h-[60px] ${
+                className={`py-3 xl:w-[410px] md:w-[300px] h-[60px] ${
                   category === "treatment"
-                    ? "bg-[#0E556C] text-white"
-                    : "bg-white border-2 border-[#0E556C] text-[#0B4457]"
+                    ? "bg-[#0E556C]  md:w-[300px] text-white"
+                    : "bg-white border-2 border-[#0E556C]  md:w-[300px] text-[#0B4457]"
                 } rounded-lg text-center text-2xl`}
                 onClick={() => handleCategoryChange("treatment")}
               >

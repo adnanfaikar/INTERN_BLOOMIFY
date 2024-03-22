@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import Button from "../UI/Button";
 import { handleBooking } from "../Api/Services/Booking";
+import { useNavigate } from "react-router-dom";
 
-const DatePicker = () => {
+const DatePicker = ({ isBooking }) => {
+  const [bookingError, setBookingError] = useState("");
+
   const tanggalSekarang = new Date();
   const hari = tanggalSekarang.getDay();
+  const navigate = useNavigate();
 
   const namaHari = [
     "Sunday",
@@ -50,9 +54,11 @@ const DatePicker = () => {
     const buttons = [];
     for (let i = 0; i < 15; i++) {
       const tanggalLain = otherDay(i);
-      const dateString = `${tanggalLain.getDate()}/${
-        tanggalLain.getMonth() + 1
-      }/${tanggalLain.getFullYear()}`;
+      const year = tanggalLain.getFullYear();
+      const month = (tanggalLain.getMonth() + 1).toString().padStart(2, "0");
+      const day = tanggalLain.getDate().toString().padStart(2, "0");
+      const dateString = `${year}-${month}-${day}`;
+
       buttons.push(
         <button
           key={dateString}
@@ -77,18 +83,24 @@ const DatePicker = () => {
     setSelectedTime(time);
   };
 
+  const handleSubmitReminder = async () => {};
+
   const handleSubmit = async () => {
     try {
       if (selectedDate && selectedTime) {
-        // Memanggil fungsi booking dengan data yang dipilih
         const response = await handleBooking(
           258,
           selectedDate,
           selectedTime,
           "bca"
         );
-        // Handle respons dari API booking di sini
-        console.log("Booking successful:", response);
+        console.log("Booking response:", response);
+        // Periksa pesan dari BE
+        if (response.message === "successfully create booking") {
+          navigate("/Payment");
+        } else {
+          console.log("Booking failed:", response.message);
+        }
       } else {
         console.log("Please select both date and time.");
       }
@@ -98,27 +110,28 @@ const DatePicker = () => {
   };
 
   return (
-    <div className="w-[857px] h-[413px] shadow-lg bg-white rounded-[20px] mt-20">
+    <div className="xl:w-[857px] md:w-[400px] h-[413px] shadow-lg bg-white rounded-[20px] mt-20">
       <p className="font-medium text-2xl text-PP80 text-center pt-5">
         Choose the date you want
       </p>
-      <div className="flex overflow-x-auto space-x-10 ml-7 mt-6 w-[805px] text-PP80 text-lg pb-4">
+      <div className="flex overflow-x-auto space-x-10 ml-7 mt-6 xl:w-[805px] md:w-[307px] text-PP80 text-lg pb-4">
         {renderButtons()}
       </div>
       <p className="font-medium text-2xl text-PP80 text-center mt-10">
         Choose the time you want
       </p>
-      <div className="flex overflow-x-auto space-x-10 ml-7 mt-10 w-[805px] text-PP80 text-lg">
+      <div className="flex overflow-x-auto space-x-10 ml-7 mt-10 xl:w-[805px] md:w-[307px] text-PP80 text-lg">
         {generateTimeButtons()}
       </div>
       <Button
         variation={"primary"}
-        className="w-[809px] ml-7 mt-5"
-        onClick={handleSubmit} // Panggil handleSubmit saat tombol "Done" ditekan
+        className="xl:w-[809px] md:w-[300px] ml-7 mt-5"
+        onClick={isBooking ? handleSubmit : handleSubmitReminder}
         disabled={!selectedDate || !selectedTime}
       >
         Done
       </Button>
+      {bookingError && <p className="text-red-500">{bookingError}</p>}
     </div>
   );
 };

@@ -7,7 +7,7 @@ const BannerPromo = ({ imageUrl, title, description, promo }) => {
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-[384px] object-cover "
+          className="w-full h-[384px]  object-cover "
         />
       </div>
       <div className="items-center justify-center ml-20 mt-20">

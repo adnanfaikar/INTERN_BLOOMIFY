@@ -13,7 +13,7 @@ import Product2 from "../Assets/product_image-1.svg";
 import Article2 from "../Assets/Article_2.svg";
 import Promo from "../Assets/PromoBanner.svg";
 
-const Home = () => {
+const PersonalizePage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     document.title = "Bloomify";
@@ -26,27 +26,11 @@ const Home = () => {
   return (
     <MainLayout>
       <div className="flex justify-center items-center">
-        <div className="w-full h-[432px] bg-[#CFE0E6] border border-gray-400 flex justify-center items-center -pl-10">
-          <div className="xl:bg-[url('../src/Assets/Banner-Photo.svg')] bg-cover w-[642px] h-[361px]  mx-0 md:mx-auto md:bg-PP00 sm:hidden xl:inline"></div>
-          <div className="max-w-[505px] h-[377px] text-center md:text-left  pt-5 md:items-center">
-            <h6 className="font-semibold text-[#093341] flex xl:text-6xl md:text-3xl md:font-bold sm:text-xl sm:font-bold">
-              WELCOME TO{" "}
-              <br className="hidden sm:hidden md:hidden lg:hidden xl:inline" />{" "}
-              BLOOMIFY
-            </h6>
-            <p className="xl:text-xl text-justify mt-5 md:text-base sm:justify">
-              Not sure where to start? Explore our informative articles, how-to
-              guides, product recommendations and consultations to gain valuable
-              insights into your beauty and wellness journey.
+        <div className="xl:bg-[url('../src/Assets/Banner-2.svg')] bg-cover w-full h-[481px]  mx-0 md:mx-auto md:bg-PP00 sm:hidden xl:inline ">
+          <div className="max-w-[505px] h-[377px] text-center md:text-center  pt-5 md:items-center  ">
+            <p>
+              These are the results of the <br /> survey that are right for you!
             </p>
-            <Button
-              variation={"primary"}
-              className="w-full mt-10"
-              onClick={() => navigate("/survey")}
-            >
-              Find Now
-            </Button>
-            <br />
           </div>
         </div>
       </div>
@@ -100,7 +84,7 @@ const Home = () => {
             price="100.000"
           />
 
-          <div className="hidden lg:flex">
+          <div className="hidden md:flex">
             <ProductCard
               imageUrl={Product1}
               title="Acne Treatment"
@@ -160,4 +144,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default PersonalizePage;
