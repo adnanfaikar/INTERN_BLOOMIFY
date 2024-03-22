@@ -18,7 +18,7 @@ const ProfilePage = (user) => {
           <button>
             <p>Bloomify Point</p>
           </button>
-          <button onClick={() => navigate("/personalizepage")}>
+          <button onClick={() => navigate("/Personalize")}>
             <p>Personalized Skin</p>
           </button>
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import STAR from "../Assets/STAR.svg";
 
 const DoctorCard = ({
   Name,
@@ -28,11 +29,11 @@ const DoctorCard = ({
           <p className="text-[8px] pt-[3px] pl-2">{old} Years Old</p>
         </div>
         <div className="flex ml-2">
-          <img src="../src/Assets/STAR.svg" alt="" className="w-5 h-5 mx-1" />
-          <img src="../src/Assets/STAR.svg" alt="" className="w-5 h-5 mx-1" />
-          <img src="../src/Assets/STAR.svg" alt="" className="w-5 h-5 mx-1" />
-          <img src="../src/Assets/STAR.svg" alt="" className="w-5 h-5 mx-1" />
-          <img src="../src/Assets/STAR.svg" alt="" className="w-5 h-5 mx-1" />
+          <img src={STAR} alt="" className="w-5 h-5 mx-1" />
+          <img src={STAR} alt="" className="w-5 h-5 mx-1" />
+          <img src={STAR} alt="" className="w-5 h-5 mx-1" />
+          <img src={STAR} alt="" className="w-5 h-5 mx-1" />
+          <img src={STAR} alt="" className="w-5 h-5 mx-1" />
         </div>
       </div>
       <p className="pt-2">Alumnus</p>

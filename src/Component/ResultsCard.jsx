@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import STAR from "../Assets/STAR.svg";
 
 const ResultsCard = ({
   Title,
@@ -26,11 +27,11 @@ const ResultsCard = ({
           <h3 className="font-semibold text-2xl">Special Offers</h3>
           <h3 className="text-[#0E556C] font-semibold text-xl mt-3">{Title}</h3>
           <div className="flex w-6 h-6 mt-5">
-            <img src="../src/Assets/STAR.svg" alt="" className="mr-1" />
-            <img src="../src/Assets/STAR.svg" alt="" className="mr-1" />
-            <img src="../src/Assets/STAR.svg" alt="" className="mr-1" />
-            <img src="../src/Assets/STAR.svg" alt="" className="mr-1" />
-            <img src="../src/Assets/STAR.svg" alt="" className="mr-1" />
+            <img src={STAR} alt="" className="mr-1" />
+            <img src={STAR} alt="" className="mr-1" />
+            <img src={STAR} alt="" className="mr-1" />
+            <img src={STAR} alt="" className="mr-1" />
+            <img src={STAR} alt="" className="mr-1" />
           </div>
           <div className="w-[118px] h-6 bg-[#398097] rounded-2xl mt-6">
             <h3 className="text-white font-semibold text-xs text-center pt-1">
