@@ -18,6 +18,7 @@ import WaitingPayment from "../Pages/WaitingPayment";
 import ProfilePage from "../Pages/ProfilePage";
 import ReminderPage from "../Pages/ReminderPage";
 import PersonalizePage from "../Pages/PersonalizePage";
+import DetailsDoctor from "../Pages/DetailsDoctor";
 
 import ProtectedRoute from "./ProtectedRoute";
 import AuthRoute from "./AuthRoute";
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
       {
         path: "/Details",
         element: <DetailsPage />,
+      },
+      {
+        path: "/DetailsDoctor",
+        element: <DetailsDoctor />,
       },
       {
         path: "/Result",

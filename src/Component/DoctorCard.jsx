@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const DoctorCard = ({
   Name,
@@ -10,8 +11,12 @@ const DoctorCard = ({
   imageUrl,
   old,
 }) => {
+  const navigate = useNavigate();
   return (
-    <div className="w-[335px] h-[695px] border-2 border-black rounded-2xl px-[20px] bg-white">
+    <div
+      className="w-[335px] h-[695px] border-2 border-black rounded-2xl px-[20px] bg-white"
+      onClick={() => navigate("/detailsdoctor")}
+    >
       <div className=" h-[295px] w-[295px]  pt-7 ">
         <img src={imageUrl} alt="" className="rounded-xl" />
       </div>

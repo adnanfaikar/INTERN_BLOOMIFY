@@ -1,6 +1,8 @@
 import React from "react";
 import MainLayout from "../Layout/MainLayout";
+import { useNavigate } from "react-router-dom";
 const ProfilePage = (user) => {
+  const navigate = useNavigate();
   return (
     <MainLayout>
       <div className="flex flex-col">
@@ -16,7 +18,7 @@ const ProfilePage = (user) => {
           <button>
             <p>Bloomify Point</p>
           </button>
-          <button>
+          <button onClick={() => navigate("/personalizepage")}>
             <p>Personalized Skin</p>
           </button>
         </div>

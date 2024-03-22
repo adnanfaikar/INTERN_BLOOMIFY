@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Button from "../UI/Button";
 import closeIcon from "../Assets/closeIcon.svg";
+import { useNavigate } from "react-router-dom";
 
 const Notification = ({ onClose }) => {
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -11,6 +13,7 @@ const Notification = ({ onClose }) => {
 
   const handleClose = (confirmed) => {
     setIsVisible(false);
+
     setTimeout(() => {
       onClose(confirmed);
     }, 100);
@@ -27,7 +30,7 @@ const Notification = ({ onClose }) => {
             >
               <img src={closeIcon} alt="" />
             </button>
-            <p className="text-lg font-semibold mb-4">Are You Sure?</p>
+            <p className="text-2xl  mb-20">Are You Sure?</p>
             <div className="flex">
               <Button
                 variation={"Button-Alert"}
@@ -38,7 +41,7 @@ const Notification = ({ onClose }) => {
               </Button>
               <Button
                 variation={"primary"}
-                onClick={() => handleClose(true)}
+                onClick={() => navigate("/waitingpayment")}
                 className="ml-4 w-[193px] h-[40px]"
               >
                 Yes

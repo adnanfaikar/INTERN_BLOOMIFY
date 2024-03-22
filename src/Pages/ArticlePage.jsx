@@ -1,6 +1,7 @@
 import React from "react";
 import MainLayout from "../Layout/MainLayout";
 import Author from "../Component/Author";
+import ImageAuthor from "../Assets/Photo_1.svg";
 
 const ArticlePage = () => {
   return (
@@ -14,7 +15,7 @@ const ArticlePage = () => {
             <Author
               name="Dr. Christina Asyi, Ph. D."
               reviewer={"Dr. John Doe"}
-              imageUrl={"../src/Assets/Photo_1.svg"}
+              imageUrl={ImageAuthor}
             />{" "}
           </div>
 
